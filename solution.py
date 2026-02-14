@@ -1,5 +1,3 @@
-import sys
-
 def snail(matrix):
     result = []
     n = len(matrix)
@@ -30,18 +28,13 @@ def snail(matrix):
 
 
 if __name__ == "__main__":
-    input = sys.stdin.read
-    data = input().strip().split()
-
-    n = int(data[0])
-    nums = list(map(int, data[1:]))
-
-    matrix = []
-    index = 0
-    for _ in range(n):
-        row = nums[index:index+n]
-        matrix.append(row)
-        index += n
+    matrix = [
+        [1,  2,  3,  4,  5],
+        [16, 17, 18, 19, 6],
+        [15, 24, 25, 20, 7],
+        [14, 23, 22, 21, 8],
+        [13, 12, 11, 10, 9]
+    ]
 
     result = snail(matrix)
     print(*result)
