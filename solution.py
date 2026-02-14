@@ -1,7 +1,3 @@
-# Snail Matrix Traversal
-# This script prints the spiral traversal
-# of the matrix shown in the challenge image.
-
 def snail(matrix):
     result = []
     n = len(matrix)
@@ -41,4 +37,11 @@ if __name__ == "__main__":
     ]
 
     result = snail(matrix)
-    print(result)
+
+    n = len(matrix)
+    index = 0
+
+    for _ in range(n):
+        row = result[index:index+n]
+        print(" ".join(f"{num:2}" for num in row))
+        index += n
